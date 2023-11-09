@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: doszhankakytayev
+      changes:
+        - addColumn:
+            tableName: books
+            columns:
+              - column:
+                  name: person_id
+                  type: int
+                  constraints:
+                    foreignKeyName: fk_person_id
+                    references: people(id)
